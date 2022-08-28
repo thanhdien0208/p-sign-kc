@@ -76,12 +76,33 @@
                     Ký tất cả
                     </a>                
                 </button>
-                <button class="create_vb">
-                    <a href="#addDoc">
-                        <img src="./image/add-vb.png" alt="add-vb">
-                    Tạo văn bản mới
-                    </a>
-                </button>
+                <div class="dropdown">
+                    <button onclick="btnDropdown()" class="create_vb">
+                        <a href="#" class="dropbtn">
+                            <img src="./image/add-vb.png" alt="add-vb">
+                        Tạo văn bản mới
+                        </a>
+                    </button>
+
+                    <div id="btnUpDropdown" class="dropdown-content">
+                        <div class="dropdown_item">
+                            <label for="myfile">
+                                <div class="upload-btn-wrapper">
+                                    <button class="btn"><i class="fa-solid fa-file-circle-plus"></i> Thêm file từ PC</button>
+                                    <input type="file" name="myfile" />
+                                </div>
+                            </label>
+                         </div>
+                        <div class="dropdown_item">
+                            <label for="myfile">
+                                <div class="upload-btn-wrapper">
+                                    <button class="btn"><i class="fa-solid fa-file-circle-plus"></i> Thêm file từ DB</button>
+                                    <!-- <input type="file" name="myfile" /> -->
+                                </div>
+                            </label>
+                         </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="table_content">
@@ -329,7 +350,7 @@
         </form>
     </div>
     <!-- Modal Add Doc -->
-    <div id="addDoc" class="modal">
+    <!-- <div id="addDoc" class="modal">
         <form action="/" method="post">
             <div class="modal__content">
                 <div class="modal__title">
@@ -379,7 +400,7 @@
                 <a href="#" class="modal__close">&times;</a>
             </div>
         </form>
-    </div>
+    </div> -->
      <!-- JS -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>

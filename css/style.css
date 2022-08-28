@@ -308,6 +308,41 @@ section .table_content th{
   
 }
 
+/* btnupDropdown */
+
+#btnUpDropdown .upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#btnUpDropdown .btn {
+  border: 2px solid #003A8C;
+  color: #003A8C;
+  background-color: white;
+  padding: 5px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: start;
+}
+
+#btnUpDropdown .upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* end */
+
 section .table_content td{
   text-align: left;
   padding: 10px 20px;
