@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Văn bản đã ký</title>
+    <title>Văn bản chờ ký</title>
     <link rel="icon" href="https://pvssolution.com/wp-content/uploads/2022/07/P-sign_logo_gold.png" type="image/gif" sizes="16x16">
     <!-- CSS -->
     <link
@@ -25,10 +25,10 @@
                     <li class="nav_item ">
                         <a href="./index.html" > <img class="icon-vb" src="./image/nav-icon_exl.png" alt="cho-ky"> File excel</a>
                     </li>
-                    <li class="nav_item">
+                    <li class="nav_item active">
                         <a href="./waiting-signed-doc.html" > <img class="icon-vb" src="./image/cho-ky.png" alt="cho-ky"> Văn bản chờ ký</a>
                     </li>
-                    <li class="nav_item active">
+                    <li class="nav_item">
                         <a href="./signed-doc.html" > <img class="icon-vb" src="./image/da-ky.png" alt="da-ky"> Văn bản đã ký</a> 
                     </li>
                     
@@ -75,10 +75,11 @@
             <div class="btn_content">
                 <button class="all-sign">
                     <a href="#">
-                        <img src="./image/icon-email.png" alt="email">
-                    Gửi mail tất cả
+                        <img src="./image/vb-sign.png" alt="vb-sign">
+                    Ký tất cả
                     </a>                
                 </button>
+                
             </div>
         </div>
         <div class="table_content">
@@ -89,11 +90,10 @@
                     </th>
                     <th>Họ và tên</th>
                     <th>Email</th>
-                    <th>Thời gian gửi</th>
+                    <th>Thời gian tạo</th>
                     <th>Tên file</th>
                     <th>Danh mục</th>
                     <th>Loại account</th>
-                    <th>Trạng thái</th>
                     <th>Xem file</th>
                 </tr>
                 <tr>
@@ -101,12 +101,11 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-success">Đã gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
                 <tr>
@@ -114,12 +113,11 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-fail">Chưa gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
                 <tr>
@@ -127,12 +125,11 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-success">Đã gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
                 <tr>
@@ -140,12 +137,11 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-fail">Chưa gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
                 <tr>
@@ -153,12 +149,11 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-success">Đã gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
                 <tr>
@@ -166,12 +161,11 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-fail">Chưa gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
                 <tr>
@@ -179,15 +173,14 @@
                         <input type="checkbox" name="check" id="check" class="checkitem">
                     </td>
                     <td>Nguyễn Thanh Điền</td>
-                    <td>diennt@pvs.com.vn</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
+                    <td><button class="btn-edit"><img class="icon-edit" src="./image/edit-3.png" alt="edit"></button> diennt@pvs.com.vn</td>
+                    <td>03/08/2022 6:50</td>
+                    <td>Công Văn ký 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td><p class="status-success">Đã gửi</p></td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
-                
+
             </table>
         </div>
         <div class="pagination" id="pagination">
@@ -200,12 +193,11 @@
           </div>
      </section>
      <footer>
-        <div class="copy-right">
-            <p>&copy; <a href="https://pvssolution.com">pvssolution.com</a></p>
-        </div>
-     </footer>
-
-     <!-- Modal Info -->
+         <div class="copy-right">
+             <p>&copy; <a href="https://pvssolution.com">pvssolution.com</a></p>
+            </div>
+    </footer>
+    <!-- Modal Info -->
      <div id="info" class="modal">
         <form action="/" method="post">
             <div class="modal__content">
@@ -342,7 +334,7 @@
             </div>
         </form>
     </div>
- 
+
      <!-- JS -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>
@@ -362,7 +354,7 @@
             });
         });
      </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
      <script src="./js/main.js"></script>
 </body>
 </html>

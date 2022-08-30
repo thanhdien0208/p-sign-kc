@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P-Sign KC</title>
+    <title>Psign-KC</title>
     <link rel="icon" href="https://pvssolution.com/wp-content/uploads/2022/07/P-sign_logo_gold.png" type="image/gif" sizes="16x16">
     <!-- CSS -->
     <link
@@ -12,6 +12,7 @@
      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -23,7 +24,10 @@
             <nav>
                 <ul class="nav_links " id="navLink">
                     <li class="nav_item active">
-                        <a href="./index.html" > <img class="icon-vb" src="./image/cho-ky.png" alt="cho-ky"> Văn bản chờ ký</a>
+                        <a href="./index.html" > <img class="icon-vb" src="./image/nav-icon_exl.png" alt="cho-ky"> File excel</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="./waiting-signed-doc.html" > <img class="icon-vb" src="./image/cho-ky.png" alt="cho-ky"> Văn bản chờ ký</a>
                     </li>
                     <li class="nav_item">
                         <a href="./signed-doc.html" > <img class="icon-vb" src="./image/da-ky.png" alt="da-ky"> Văn bản đã ký</a> 
@@ -60,6 +64,7 @@
                         Đăng xuất
                     </a>
                 </div>
+
             </div>
         </div>
      </header>
@@ -69,132 +74,103 @@
                 <p>Danh sách văn bản chờ ký</p>
                 <span class="number_vb">7 văn bản</span>
             </div>
-            <div class="btn_content">
-                <button class="all-sign">
-                    <a href="#">
-                        <img src="./image/vb-sign.png" alt="vb-sign">
-                    Ký tất cả
-                    </a>                
-                </button>
-                <div class="dropdown">
-                    <button onclick="btnDropdown()" class="create_vb">
+            <div id="btn-upload" class="btn_content">
+
+                <div class="upload-btn-wrapper">
+                    <button class="btn btn-up">
                         <a href="#" class="dropbtn">
-                            <img src="./image/add-vb.png" alt="add-vb">
-                        Tạo văn bản mới
+                            <img src="./image/add-vb_white.png" alt="add-vb">
+                        Tải tài liệu lên
                         </a>
                     </button>
-
-                    <div id="btnUpDropdown" class="dropdown-content">
-                        <div class="dropdown_item">
-                            <label for="myfile">
-                                <div class="upload-btn-wrapper">
-                                    <button class="btn"><i class="fa-solid fa-file-circle-plus"></i> Thêm file từ PC</button>
-                                    <input type="file" name="myfile" />
-                                </div>
-                            </label>
-                         </div>
-                        <div class="dropdown_item">
-                            <label for="myfile">
-                                <div class="upload-btn-wrapper">
-                                    <button class="btn"><i class="fa-solid fa-file-circle-plus"></i> Thêm file từ DB</button>
-                                    <!-- <input type="file" name="myfile" /> -->
-                                </div>
-                            </label>
-                         </div>
-                    </div>
+                    <input type="file" name="myfile" />
                 </div>
+
             </div>
         </div>
         <div class="table_content">
             <table>
                 <tr>
                     <th>
-                        <input type="checkbox" name="check_all" id="check_all" class="checkall">
+                        STT
                     </th>
-                    <th>Họ và tên</th>
-                    <th>Email</th>
-                    <th>Thời gian tạo</th>
-                    <th>Thời gian gửi</th>
                     <th>Tên file</th>
-                    <th>Xem file</th>
+                    <th>Người tải lên</th>
+                    <th>Thời gian tải lên</th>
+                    <th>Xóa</th>
+                    <th>Tạo PDF</th>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <input type="checkbox" name="check" id="check" class="checkitem">
+                    <td class="td-action">
+                        1
                     </td>
-                    <td>Nguyễn Thanh Điền</td>
+                    <td class="td-filename"><a href="#"><img src="./image/icon-exl.png" alt="document"></a><span>Công văn gửi đi</span></td>
                     <td>diennt@pvs.com.vn</td>
                     <td>03/08/2022 6:50</td>
-                    <td>03/08/2022 9:20</td>
-                    <td>Công Văn 1</td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td class="td-action"><button class="btn-clear"><img src="./image/icon-clear.png" alt="icon-clear"></button></td>
+                    <td class="td-action"><a href="#createPDF"><img src="./image/icon-pdf_blue.png" alt="document" class="create-pdf" ></a></td>
                 </tr>
+                
                
             </table>
         </div>
@@ -349,58 +325,54 @@
             </div>
         </form>
     </div>
-    <!-- Modal Add Doc -->
-    <!-- <div id="addDoc" class="modal">
-        <form action="/" method="post">
-            <div class="modal__content">
-                <div class="modal__title">
-                    <img src="./image/add-vb.png" alt="add-vb">
-                    <p>Tạo văn bản mới</p>          
-                </div>
-    
-                <div class="modal__detail">
-                    <embed src="https://pvssolution.com/wp-content/uploads/2020/05/HDSD-PM-%C4%90%E1%BB%8CC-KQ-SI%C3%8AU-%C3%82M-HEALTHY-CARE.pdf" width="500" height="500" type="application/pdf"> 
-                    <div class="input_group">
-                        <div class="input_item">
-                            <label for="title_doc">
-                                Tiêu đề
-                                <input type="text" name="title_doc" placeholder="Nhập tiêu đề" required>
-                            </label>
-                        </div>
-                        <div class="input_item">
-                            <label for="desc_content">
-                                Mô tả nội dung
-                                <input type="text" name="desc_content" placeholder="Nhập mô tả nội dung" required>
-                            </label>
-                        </div>
-                        <div class="input_item">
-                            <label for="type_doc">
-                                Loại văn bản
-                                <input type="text" name="type_doc" placeholder="Nhập loại văn bản" required>
-                            </label>
-                        </div>
-                        <div class="input_item">
-                            <label for="passwd">
-                                Thêm file <br>
-                                <div class="upload-btn-wrapper">
-                                    <button class="btn"><i class="fa-solid fa-file-circle-plus"></i></button>
-                                    <input type="file" name="myfile" />
-                                </div>
-                            </label>
+
+        <!-- Modal Create PDF -->
+        <div id="createPDF" class="modal">
+            <form action="/" method="post">
+                <div class="modal__content">
+                    <div class="modal__title">
+                        <img src="./image/icon-pdf.png" alt="vb-sign">
+                        <p class="title">Tạo PDF</p>          
+                    </div>
+        
+                    <div class="modal__detail">
+                        <div class="input_group">
+                            <div class="input_item">
+                                <p class="label">Danh mục</p>
+                                <select class="select-category" multiple="multiple">
+
+                                    <option value="Công việc" data-badge="">Công việc</option>
+                                    <option value="Hóa đơn" data-badge="">Hóa đơn</option>
+                                    <option value="Khách hàng VIP" data-badge="">Khách hàng VIP</option>
+                                    <option value="Khách hàng tiềm năng" data-badge="">Khách hàng tiềm năng</option>
+                                    <option value="Văn bản ký" data-badge="">Văn bản ký</option>
+                    
+                                </select>
+                            </div>
+                            <div class="input_item">
+                                <p class="label">Loại Account</p>
+                                <select class="select-account" multiple="multiple">
+
+                                    <option value="Account 1" data-badge="">Account 1</option>
+                                    <option value="Account 2" data-badge="">Account 2</option>
+                                    <option value="Account 3" data-badge="">Account 3</option>
+                    
+                                </select>
+                            </div>
+                            
                         </div>
                     </div>
+        
+                    
+                    <div class="modal__footer">
+                        <button class="btn_cancel">Huỷ</button>
+                        <button class="btn_save">Lưu</button>
+                    </div>
+                    
+                    <a href="#" class="modal__close">&times;</a>
                 </div>
-    
-                
-                <div class="modal__footer">
-                    <button class="btn_cancel">Huỷ</button>
-                    <button class="btn_save">Gửi</button>
-                </div>
-                
-                <a href="#" class="modal__close">&times;</a>
-            </div>
-        </form>
-    </div> -->
+            </form>
+        </div>
      <!-- JS -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>
@@ -421,6 +393,24 @@
         });
      </script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+	</head>
+     <script> // multi seclect
+        $(".select-category").select2({
+        closeOnSelect : false,
+        placeholder : "Chọn danh mục",
+        allowHtml: true,
+        allowClear: true,
+        tags: true
+    });
+        $(".select-account").select2({
+        closeOnSelect : false,
+        placeholder : "Chọn loại account",
+        allowHtml: true,
+        allowClear: true,
+        tags: true
+    });
+     </script>
      <script src="./js/main.js"></script>
 </body>
 </html>
