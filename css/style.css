@@ -433,6 +433,13 @@ section .table_content td .status-fail{
   font-style: italic;
 }
 
+section .table_content td .select-status{
+  border: 1px solid #b4b4b4;
+  outline: none;
+  border-radius: 4px;
+  padding: 5px;
+}
+
 section .pagination {
   padding-top: 20px;
 }
