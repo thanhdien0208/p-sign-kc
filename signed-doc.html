@@ -82,7 +82,7 @@
             </div>
         </div>
         <div class="table_content">
-            <table>
+            <table id='statusTable'>
                 <tr>
                     <th>
                         <input type="checkbox" name="check_all" id="check_all" class="checkall">
@@ -93,7 +93,13 @@
                     <th>Tên file</th>
                     <th>Danh mục</th>
                     <th>Loại account</th>
-                    <th>Trạng thái</th>
+                    <th>
+                        <select id='statusSelector' class="styled-select slate">
+                            <option value='gửi'>Trạng thái</option>
+                            <option value='Đã gửi'>Đã gửi</option>
+                            <option value='Chưa gửi'>Chưa gửi</option>
+                         </select>
+                    </th>
                     <th>Xem file</th>
                 </tr>
                 <tr>
@@ -106,12 +112,8 @@
                     <td>Công Văn 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td>
-                        <select name="" id="" class="select-status">
-                            <option value=""></option>
-                            <option value="Đã gửi" class="status-success">Đã gửi</option>
-                            <option value="Chưa gửi" class="status-fail">Chưa gửi</option>
-                        </select>
+                    <td class="status-success">
+                        Đã gửi
                     </td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
@@ -125,12 +127,8 @@
                     <td>Công Văn 1</td>
                     <td>Công việc, hóa đơn</td>
                     <td>Account 1, Account 3</td>
-                    <td>
-                        <select name="" id="" class="select-status">
-                            <option value=""></option>
-                            <option value="Đã gửi" class="status-success">Đã gửi</option>
-                            <option value="Chưa gửi" class="status-fail">Chưa gửi</option>
-                        </select>
+                    <td class="status-fail">
+                        Chưa gửi
                     </td>
                     <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
                 </tr>
@@ -310,6 +308,7 @@
         });
      </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+      <script src="./js/filter.js"></script>
      <script src="./js/main.js"></script>
 </body>
 </html>
