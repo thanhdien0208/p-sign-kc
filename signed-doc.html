@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,12 @@
     <title>Văn bản đã ký</title>
     <link rel="icon" href="https://pvssolution.com/wp-content/uploads/2022/07/P-sign_logo_gold.png" type="image/gif" sizes="16x16">
     <!-- CSS -->
-    <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
         <div class="nav_left">
@@ -23,15 +23,15 @@
             <nav>
                 <ul class="nav_links " id="navLink">
                     <li class="nav_item ">
-                        <a href="./index.html" > <img class="icon-vb" src="./image/nav-icon_exl.png" alt="cho-ky"> File excel</a>
+                        <a href="./index.html"> <img class="icon-vb" src="./image/nav-icon_exl.png" alt="cho-ky"> File excel</a>
                     </li>
                     <li class="nav_item">
-                        <a href="./waiting-signed-doc.html" > <img class="icon-vb" src="./image/cho-ky.png" alt="cho-ky"> Văn bản chờ ký</a>
+                        <a href="./waiting-signed-doc.html"> <img class="icon-vb" src="./image/cho-ky.png" alt="cho-ky"> Văn bản chờ ký</a>
                     </li>
                     <li class="nav_item active">
-                        <a href="./signed-doc.html" > <img class="icon-vb" src="./image/da-ky.png" alt="da-ky"> Văn bản đã ký</a> 
+                        <a href="./signed-doc.html"> <img class="icon-vb" src="./image/da-ky.png" alt="da-ky"> Văn bản đã ký</a>
                     </li>
-                    
+
                 </ul>
             </nav>
         </div>
@@ -41,32 +41,29 @@
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="header_info dropdown">
-                <button onclick="myFunction()" class="btn_info" >
+                <button onclick="myFunction()" class="btn_info">
                     <img class="dropbtn" src="./image/avatar-icon.png" alt="avatar-icon">
                 
                     <i class="fa-solid fa-angle-down dropbtn"></i>
                 </button>
-                
-               
+
+
                 <div id="navDropdown" class="dropdown-content">
                     <a href="#info">
-                        <img src="./image/UserList.png" alt="UserList">
-                        Thông tin tài khoản
+                        <img src="./image/UserList.png" alt="UserList"> Thông tin tài khoản
                     </a>
                     <a href="#eSign">
-                        <img src="./image/edit.png" alt="edit-icon">
-                        Tạo chữ ký số
+                        <img src="./image/edit.png" alt="edit-icon"> Tạo chữ ký số
                     </a>
                     <hr class="hr_submenu">
                     <a href="#logout">
-                        <img src="./image/log-out.png" alt="log-out">
-                        Đăng xuất
+                        <img src="./image/log-out.png" alt="log-out"> Đăng xuất
                     </a>
                 </div>
             </div>
         </div>
-     </header>
-     <section>
+    </header>
+    <section>
         <div class="top_content">
             <div class="title_content">
                 <p>Danh sách văn bản chờ ký</p>
@@ -79,6 +76,26 @@
                     Gửi mail tất cả
                     </a>                
                 </button>
+            </div>
+        </div>
+        <div class="filter_content">
+            <div class="filter_left">
+                <div class="input-search">
+                    <input type="search" placeholder="Tìm kiếm file">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="input-day mt-15">
+                    <input type="date" name="" id=""> đến
+                    <input type="date" name="" id="">
+                    <button type="submit" class="btn-submit">Lọc</button>
+                </div>
+            </div>
+            <div class="filter_right">
+                <div class="input-day mt-50 pr-15">
+                    <input type="date" name="" id=""> đến
+                    <input type="date" name="" id="">
+                    <button type="submit" class="btn-submit">Xuất Log</button>
+                </div>
             </div>
         </div>
         <div class="table_content">
@@ -115,7 +132,9 @@
                     <td class="status-success">
                         Đã gửi
                     </td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td>
+                        <a href="#viewPDF"><img src="./image/document.png" alt="document"></a>
+                    </td>
                 </tr>
                 <tr>
                     <td>
@@ -130,9 +149,11 @@
                     <td class="status-fail">
                         Chưa gửi
                     </td>
-                    <td><a href="#viewPDF"><img src="./image/document.png" alt="document"></a></td>
+                    <td>
+                        <a href="#viewPDF"><img src="./image/document.png" alt="document"></a>
+                    </td>
                 </tr>
-                
+
             </table>
         </div>
         <div class="pagination" id="pagination">
@@ -142,23 +163,23 @@
             <a href="#" class="numb-page">3</a>
             <a href="#" class="numb-page">4</a>
             <a href="#">»</a>
-          </div>
-     </section>
-     <footer>
+        </div>
+    </section>
+    <footer>
         <div class="copy-right">
             <p>&copy; <a href="https://pvssolution.com">pvssolution.com</a></p>
         </div>
-     </footer>
+    </footer>
 
-     <!-- Modal Info -->
-     <div id="info" class="modal">
+    <!-- Modal Info -->
+    <div id="info" class="modal">
         <form action="/" method="post">
             <div class="modal__content">
                 <div class="modal__title">
                     <img src="./image/UserList.png" alt="UserList">
-                    <p>Thông tin tài khoản</p>          
+                    <p>Thông tin tài khoản</p>
                 </div>
-    
+
                 <div class="modal__detail">
                     <div class="user">
                         <span class="avarta_name">D</span>
@@ -167,7 +188,7 @@
                             <small>User: 07/08/2022</small>
                         </div>
                     </div>
-    
+
                     <div class="input_group">
                         <label for="full_name">
                             Họ và tên
@@ -188,11 +209,11 @@
                                 <i class="showpass show-eye-open fas fa-eye"></i>
                               </div>
                         </label>
-                    </div>   
+                    </div>
                 </div>
-    
+
                 <div class="modal__title-child">
-                    <p>Thông tin công ty</p>          
+                    <p>Thông tin công ty</p>
                 </div>
                 <div class="modal__detail">
                     <div class="input_group">
@@ -200,16 +221,16 @@
                             Tên công ty
                             <input type="text" name="company_name" placeholder="Nhập tên công ty">
                         </label>
-        
+
                         <label for="title_name">
                             Chức danh
                             <input type="text" name="title_name" placeholder="Nhập chức danh">
                         </label>
-                        
-                    </div>   
+
+                    </div>
                 </div>
                 <div class="modal__title-child">
-                    <p>Thông tin địa chỉ</p>          
+                    <p>Thông tin địa chỉ</p>
                 </div>
                 <div class="modal__detail">
                     <div class="input_group input_address">
@@ -217,14 +238,14 @@
                             Địa chỉ
                             <input type="text" name="company_address" placeholder="Nhập thông tin địa chỉ">
                         </label>
-                        
-                    </div>   
+
+                    </div>
                 </div>
                 <div class="modal__footer">
                     <button class="btn_cancel">Huỷ</button>
                     <button class="btn_save">Lưu</button>
                 </div>
-                
+
                 <a href="#" class="modal__close">&times;</a>
             </div>
         </form>
@@ -235,9 +256,9 @@
             <div class="modal__content">
                 <div class="modal__title">
                     <img src="./image/vb-sign.png" alt="vb-sign">
-                    <p>Thêm chữ ký</p>          
+                    <p>Thêm chữ ký</p>
                 </div>
-    
+
                 <div class="modal__detail">
                     <div class="user">
                         <span class="avarta_name">D</span>
@@ -246,21 +267,21 @@
                             <small>User: 07/08/2022</small>
                         </div>
                     </div>
-    
+
                     <div class="input_group">
                         <div class="upload-btn-wrapper">
                             <button class="btn">Upload chữ ký số</button>
                             <input type="file" name="myfile" />
                         </div>
-                    </div>   
+                    </div>
                 </div>
-    
-                
+
+
                 <div class="modal__footer">
                     <button class="btn_cancel">Huỷ</button>
                     <button class="btn_save">Lưu</button>
                 </div>
-                
+
                 <a href="#" class="modal__close">&times;</a>
             </div>
         </form>
@@ -271,44 +292,45 @@
             <div class="modal__content">
                 <div class="modal__title">
                     <i class="fa-solid fa-file-pdf"></i>
-                    <p>View file</p>          
+                    <p>View file</p>
                 </div>
-    
+
                 <div class="modal__detail">
-                    <embed src="https://pvssolution.com/wp-content/uploads/2020/05/HDSD-PM-%C4%90%E1%BB%8CC-KQ-SI%C3%8AU-%C3%82M-HEALTHY-CARE.pdf" width="800" height="500" type="application/pdf"> 
+                    <embed src="https://pvssolution.com/wp-content/uploads/2020/05/HDSD-PM-%C4%90%E1%BB%8CC-KQ-SI%C3%8AU-%C3%82M-HEALTHY-CARE.pdf" width="800" height="500" type="application/pdf">
                 </div>
-    
-                
+
+
                 <div class="modal__footer">
                     <button class="btn_save">Xong</button>
                 </div>
-                
+
                 <a href="#" class="modal__close">&times;</a>
             </div>
         </form>
     </div>
- 
-     <!-- JS -->
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>
-     <script>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hideshowpassword/2.0.8/hideShowPassword.min.js"></script>
+    <script>
         // toggle password visibility
         $('#password + .showpass').on('click', function() {
-        $(this).toggleClass('show-eye-close').toggleClass('show-eye-open'); // toggle our classes for the eye icon
-        $('#password').togglePassword(); // activate the hideShowPassword plugin
+            $(this).toggleClass('show-eye-close').toggleClass('show-eye-open'); // toggle our classes for the eye icon
+            $('#password').togglePassword(); // activate the hideShowPassword plugin
         });
-     </script>
-     <script type="text/javascript">
-        $(function(){
+    </script>
+    <script type="text/javascript">
+        $(function() {
             /*Check & uncheck all*/
-            $(document).on('change', '.checkall', function(){
+            $(document).on('change', '.checkall', function() {
                 var $_this = $(this);
                 $('.checkitem').prop('checked', $_this.prop('checked'));
             });
         });
-     </script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
-      <script src="./js/filter.js"></script>
-     <script src="./js/main.js"></script>
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="./js/filter.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>
