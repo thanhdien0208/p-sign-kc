@@ -303,6 +303,12 @@ nav {
     margin-right: 5px;
 }
 
+.dropdown-content a .icon-file {
+    margin-right: 5px;
+    font-size: 20px;
+    color: #575a5e;
+}
+
 .dropdown a:hover {
     background-color: #E6ECF4;
     color: #003A8C;
@@ -460,20 +466,20 @@ section .filter_content .filter_right .pr-15 {
     padding-right: 15px;
 }
 
-section .filter_content .input-day input {
+section .filter_content .input-date input {
     padding: 5px;
     border-radius: 4px;
     border: 1px solid #b4b4b4;
     outline: none;
 }
 
-section .filter_content .input-day input:focus,
+section .filter_content .input-date input:focus,
 section .filter_content .input-search input:focus {
     outline: 1px solid #003A8C;
     border: none;
 }
 
-section .filter_content .input-day .btn-submit {
+section .filter_content .input-date .btn-submit {
     padding: 5px;
     border-radius: 4px;
     font-size: 15px;
@@ -484,7 +490,7 @@ section .filter_content .input-day .btn-submit {
     transition: all 0.5s;
 }
 
-section .filter_content .input-day .btn-submit:hover {
+section .filter_content .input-date .btn-submit:hover {
     background: #003A8C;
     color: #fff;
 }
@@ -945,6 +951,12 @@ footer {
     padding-right: 5px;
 }
 
+#eSign .modal__content .modal__title .icon-file {
+    margin-right: 5px;
+    font-size: 20px;
+    color: #003A8C;
+}
+
 #eSign .modal__content .modal__title p {
     font-weight: 500;
     font-style: 20px;
@@ -1094,6 +1106,18 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#eSign .input-date input {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #b4b4b4;
+    outline: none;
+}
+
+#eSign .input-date input:focus {
+    outline: 1px solid #003A8C;
+    border: none;
 }
 
 
