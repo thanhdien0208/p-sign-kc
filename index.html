@@ -54,14 +54,13 @@
                         <img src="./image/UserList.png" alt="UserList"> Thông tin tài khoản
                     </a>
                     <a href="#eSign">
-                        <img src="./image/edit.png" alt="edit-icon"> Tạo chữ ký số
+                        <i class="far fa-file-alt icon-file"></i> Xuất log
                     </a>
                     <hr class="hr_submenu">
                     <a href="#logout">
                         <img src="./image/log-out.png" alt="log-out"> Đăng xuất
                     </a>
                 </div>
-
             </div>
         </div>
     </header>
@@ -290,33 +289,19 @@
         <form action="/" method="post">
             <div class="modal__content">
                 <div class="modal__title">
-                    <img src="./image/vb-sign.png" alt="vb-sign">
-                    <p>Thêm chữ ký</p>
+                    <i class="far fa-file-alt icon-file"></i>
+                    <p> Xuất log</p>
                 </div>
-
                 <div class="modal__detail">
-                    <div class="user">
-                        <span class="avarta_name">D</span>
-                        <div class="info_name">
-                            <p>Nguyễn Thanh Điền</p>
-                            <small>User: 07/08/2022</small>
-                        </div>
-                    </div>
-
                     <div class="input_group">
-                        <div class="upload-btn-wrapper">
-                            <button class="btn">Upload chữ ký số</button>
-                            <input type="file" name="myfile" />
+                        <div class="input-date">
+                            Từ <input type="date" name="" id=""> đến <input type="date" name="" id="">
                         </div>
                     </div>
                 </div>
-
-
                 <div class="modal__footer">
-                    <button class="btn_cancel">Huỷ</button>
-                    <button class="btn_save">Lưu</button>
+                    <button type="submit" class="btn_save btn-submit">Xuất</button>
                 </div>
-
                 <a href="#" class="modal__close">&times;</a>
             </div>
         </form>
