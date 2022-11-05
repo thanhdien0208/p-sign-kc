@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 /* CSS reset */
 
@@ -110,8 +110,8 @@ section {
 
 body {
     line-height: 1;
-    font-family: 'Roboto', sans-serif;
-    background: #E6ECF4;
+    font-family: "Roboto", sans-serif;
+    background: #e6ecf4;
 }
 
 ol,
@@ -128,7 +128,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 
@@ -164,7 +164,7 @@ header {
     align-items: center;
     padding: 12px 24px 12px 38px;
     height: 66px;
-    background: #003A8C;
+    background: #003a8c;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -227,7 +227,7 @@ nav {
     border: none;
     outline: none;
     border-radius: 3px;
-    color: #003A8C;
+    color: #003a8c;
     font-size: 17px;
     font-weight: 600;
 }
@@ -310,8 +310,8 @@ nav {
 }
 
 .dropdown a:hover {
-    background-color: #E6ECF4;
-    color: #003A8C;
+    background-color: #e6ecf4;
+    color: #003a8c;
 }
 
 .show {
@@ -368,8 +368,8 @@ section .btn_content .create_vb a {
     padding: 5px 10px;
     display: flex;
     align-items: center;
-    border: 1px solid #003A8C;
-    color: #003A8C;
+    border: 1px solid #003a8c;
+    color: #003a8c;
     background: #fff;
     border-radius: 3px;
     cursor: pointer;
@@ -380,9 +380,9 @@ section .btn_content .btn-up a {
     padding: 5px 10px;
     display: flex;
     align-items: center;
-    border: 1px solid #003A8C;
+    border: 1px solid #003a8c;
     color: #fff;
-    background: #003A8C;
+    background: #003a8c;
     border-radius: 3px;
     cursor: pointer;
     transition: all 0.5s;
@@ -394,7 +394,7 @@ section .btn_content .btn-up a:hover {
 
 section .btn_content .all-sign a:hover,
 section .btn_content .create_vb a:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
 }
 
 section .btn_content .all-sign {
@@ -439,7 +439,7 @@ section .filter_content .input-search input {
 
 section .filter_content .input-search button {
     padding: 8px 15px;
-    background: #003A8C;
+    background: #003a8c;
     border: none;
     outline: none;
     border-radius: 0px 4px 4px 0px;
@@ -475,7 +475,7 @@ section .filter_content .input-date input {
 
 section .filter_content .input-date input:focus,
 section .filter_content .input-search input:focus {
-    outline: 1px solid #003A8C;
+    outline: 1px solid #003a8c;
     border: none;
 }
 
@@ -483,23 +483,28 @@ section .filter_content .input-date .btn-submit {
     padding: 5px;
     border-radius: 4px;
     font-size: 15px;
-    color: #003A8C;
-    border: 1px solid #003A8C;
+    color: #003a8c;
+    border: 1px solid #003a8c;
     outline: none;
     cursor: pointer;
     transition: all 0.5s;
 }
 
 section .filter_content .input-date .btn-submit:hover {
-    background: #003A8C;
+    background: #003a8c;
     color: #fff;
 }
 
 
 /* end */
 
+
+/* Table Content */
+
 section .table_content {
     margin-top: 20px;
+    overflow-y: scroll;
+    height: 500px;
 }
 
 section .table_content table {
@@ -507,16 +512,34 @@ section .table_content table {
 }
 
 section .table_content th {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 20px;
     font-weight: 500;
     text-align: left;
     font-size: 17px;
-    /* border-radius: 3px 3px 0 0; */
+    position: sticky;
+    top: 0;
 }
 
 section .table_content td .icon-edit {
     margin-bottom: -5px;
+}
+
+
+/* style scroll */
+
+#style-scroll::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f5f5f5;
+}
+
+#style-scroll::-webkit-scrollbar-thumb {
+    background-color: #003a8c;
+}
+
+#style-scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5;
 }
 
 
@@ -532,7 +555,7 @@ section .table_content td .icon-edit {
 
 #btn-upload .btn {
     border: none;
-    color: #003A8C;
+    color: #003a8c;
     background-color: white;
     padding: 5px 20px;
     border-radius: 8px;
@@ -543,7 +566,7 @@ section .table_content td .icon-edit {
     text-align: start;
 }
 
-#btn-upload .upload-btn-wrapper input[type=file] {
+#btn-upload .upload-btn-wrapper input[type="file"] {
     font-size: 100px;
     position: absolute;
     left: 0;
@@ -568,8 +591,8 @@ section .table_content td .icon-edit {
 }
 
 #btnUpDropdown .btn {
-    border: 2px solid #003A8C;
-    color: #003A8C;
+    border: 2px solid #003a8c;
+    color: #003a8c;
     background-color: white;
     padding: 5px 20px;
     border-radius: 8px;
@@ -580,7 +603,7 @@ section .table_content td .icon-edit {
     text-align: start;
 }
 
-#btnUpDropdown .upload-btn-wrapper input[type=file] {
+#btnUpDropdown .upload-btn-wrapper input[type="file"] {
     font-size: 100px;
     position: absolute;
     left: 0;
@@ -634,7 +657,7 @@ section .table_content td .btn-edit {
 }
 
 section .table_content .status-success {
-    color: #003A8C;
+    color: #003a8c;
     font-style: italic;
 }
 
@@ -658,7 +681,7 @@ section .table_content td .select-status {
     outline: none;
     /* padding: 5px; */
     border-radius: 4px;
-    background: #E6ECF4;
+    background: #e6ecf4;
 }
 
 section .pagination {
@@ -701,8 +724,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
 }
 
 #info:target {
@@ -721,7 +744,7 @@ footer {
 #info .modal__content .modal__title {
     display: flex;
     align-items: center;
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 10px 15px;
     border-radius: 5px 5px 0 0;
 }
@@ -736,7 +759,7 @@ footer {
 }
 
 #info .modal__content .modal__title-child {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 8px 15px;
 }
 
@@ -755,8 +778,8 @@ footer {
 }
 
 #info .modal__content .modal__detail .user .avarta_name {
-    color: #003A8C;
-    background: #E6ECF4;
+    color: #003a8c;
+    background: #e6ecf4;
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -806,11 +829,11 @@ footer {
     padding: 5px 10px;
     border-radius: 4px;
     margin-top: 5px;
-    color: #003A8C;
+    color: #003a8c;
 }
 
 #info .modal__content .modal__detail .input_group input:focus {
-    outline: 1px solid #003A8C;
+    outline: 1px solid #003a8c;
 }
 
 #info .modal__content .modal__detail .input_group input::placeholder {
@@ -824,7 +847,7 @@ footer {
     top: 70%;
     transform: translateY(-50%);
     font-size: 13px;
-    color: #003A8C;
+    color: #003a8c;
     cursor: pointer;
 }
 
@@ -871,13 +894,13 @@ footer {
 }
 
 #info .modal__footer .btn_cancel:hover {
-    background: #003A8C;
+    background: #003a8c;
     color: #fff;
 }
 
 #info .modal__footer .btn_save {
     color: #fff;
-    background: #003A8C;
+    background: #003a8c;
     border: none;
     outline: none;
     padding: 5px 15px;
@@ -889,7 +912,7 @@ footer {
 }
 
 #info .modal__footer .btn_save:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
     color: #333;
 }
 
@@ -922,8 +945,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
 }
 
 #eSign:target {
@@ -942,7 +965,7 @@ footer {
 #eSign .modal__content .modal__title {
     display: flex;
     align-items: center;
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 10px 15px;
     border-radius: 5px 5px 0 0;
 }
@@ -954,7 +977,7 @@ footer {
 #eSign .modal__content .modal__title .icon-file {
     margin-right: 5px;
     font-size: 20px;
-    color: #003A8C;
+    color: #003a8c;
 }
 
 #eSign .modal__content .modal__title p {
@@ -963,7 +986,7 @@ footer {
 }
 
 #eSign .modal__content .modal__title-child {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 8px 15px;
 }
 
@@ -982,8 +1005,8 @@ footer {
 }
 
 #eSign .modal__content .modal__detail .user .avarta_name {
-    color: #003A8C;
-    background: #E6ECF4;
+    color: #003a8c;
+    background: #e6ecf4;
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -1023,8 +1046,8 @@ footer {
 }
 
 #eSign .btn {
-    border: 2px solid #003A8C;
-    color: #003A8C;
+    border: 2px solid #003a8c;
+    color: #003a8c;
     background-color: white;
     padding: 8px 20px;
     border-radius: 8px;
@@ -1033,7 +1056,7 @@ footer {
     cursor: pointer;
 }
 
-#eSign .upload-btn-wrapper input[type=file] {
+#eSign .upload-btn-wrapper input[type="file"] {
     font-size: 100px;
     position: absolute;
     left: 0;
@@ -1071,13 +1094,13 @@ footer {
 }
 
 #eSign .modal__footer .btn_cancel:hover {
-    background: #003A8C;
+    background: #003a8c;
     color: #fff;
 }
 
 #eSign .modal__footer .btn_save {
     color: #fff;
-    background: #003A8C;
+    background: #003a8c;
     border: none;
     outline: none;
     padding: 5px 15px;
@@ -1089,7 +1112,7 @@ footer {
 }
 
 #eSign .modal__footer .btn_save:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
     color: #333;
 }
 
@@ -1116,7 +1139,7 @@ footer {
 }
 
 #eSign .input-date input:focus {
-    outline: 1px solid #003A8C;
+    outline: 1px solid #003a8c;
     border: none;
 }
 
@@ -1134,8 +1157,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
 }
 
 #viewPDF:target {
@@ -1146,7 +1169,7 @@ footer {
 #viewPDF .modal__content {
     border-radius: 5px;
     position: relative;
-    width: 815px;
+    width: 1115px;
     max-width: 100%;
     background: #fff;
 }
@@ -1154,7 +1177,7 @@ footer {
 #viewPDF .modal__content .modal__title {
     display: flex;
     align-items: center;
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 10px 15px;
     border-radius: 5px 5px 0 0;
 }
@@ -1169,7 +1192,7 @@ footer {
 }
 
 #viewPDF .modal__content .modal__title-child {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 8px 15px;
 }
 
@@ -1188,8 +1211,8 @@ footer {
 }
 
 #viewPDF .modal__content .modal__detail .user .avarta_name {
-    color: #003A8C;
-    background: #E6ECF4;
+    color: #003a8c;
+    background: #e6ecf4;
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -1229,8 +1252,8 @@ footer {
 }
 
 #viewPDF .btn {
-    border: 2px solid #003A8C;
-    color: #003A8C;
+    border: 2px solid #003a8c;
+    color: #003a8c;
     background-color: white;
     padding: 8px 20px;
     border-radius: 8px;
@@ -1239,7 +1262,7 @@ footer {
     cursor: pointer;
 }
 
-#viewPDF .upload-btn-wrapper input[type=file] {
+#viewPDF .upload-btn-wrapper input[type="file"] {
     font-size: 100px;
     position: absolute;
     left: 0;
@@ -1277,13 +1300,13 @@ footer {
 }
 
 #viewPDF .modal__footer .btn_cancel:hover {
-    background: #003A8C;
+    background: #003a8c;
     color: #fff;
 }
 
 #viewPDF .modal__footer .btn_save {
     color: #fff;
-    background: #003A8C;
+    background: #003a8c;
     border: none;
     outline: none;
     padding: 5px 15px;
@@ -1295,7 +1318,7 @@ footer {
 }
 
 #viewPDF .modal__footer .btn_save:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
     color: #333;
 }
 
@@ -1328,8 +1351,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
 }
 
 #addDoc:target {
@@ -1349,7 +1372,7 @@ footer {
 #addDoc .modal__content .modal__title {
     display: flex;
     align-items: center;
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 10px 15px;
     border-radius: 5px 5px 0 0;
 }
@@ -1364,7 +1387,7 @@ footer {
 }
 
 #addDoc .modal__content .modal__title-child {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 8px 15px;
 }
 
@@ -1398,11 +1421,11 @@ footer {
     padding: 5px 10px;
     border-radius: 4px;
     margin-top: 5px;
-    color: #003A8C;
+    color: #003a8c;
 }
 
 #addDoc .modal__content .modal__detail .input_group input:focus {
-    outline: 1px solid #003A8C;
+    outline: 1px solid #003a8c;
 }
 
 #addDoc .modal__content .modal__detail .input_group input::placeholder {
@@ -1419,8 +1442,8 @@ footer {
 }
 
 #addDoc .btn {
-    border: 2px solid #003A8C;
-    color: #003A8C;
+    border: 2px solid #003a8c;
+    color: #003a8c;
     background-color: white;
     padding: 5px 20px;
     border-radius: 8px;
@@ -1430,7 +1453,7 @@ footer {
     width: 100%;
 }
 
-#addDoc .upload-btn-wrapper input[type=file] {
+#addDoc .upload-btn-wrapper input[type="file"] {
     font-size: 100px;
     position: absolute;
     left: 0;
@@ -1469,13 +1492,13 @@ footer {
 }
 
 #addDoc .modal__footer .btn_cancel:hover {
-    background: #003A8C;
+    background: #003a8c;
     color: #fff;
 }
 
 #addDoc .modal__footer .btn_save {
     color: #fff;
-    background: #003A8C;
+    background: #003a8c;
     border: none;
     outline: none;
     padding: 5px 15px;
@@ -1487,7 +1510,7 @@ footer {
 }
 
 #addDoc .modal__footer .btn_save:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
     color: #333;
 }
 
@@ -1520,8 +1543,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(77, 77, 77, .7);
-    transition: all .4s;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
 }
 
 #createPDF:target {
@@ -1540,7 +1563,7 @@ footer {
 #createPDF .modal__content .modal__title {
     display: flex;
     align-items: center;
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 10px 15px;
     border-radius: 5px 5px 0 0;
 }
@@ -1555,7 +1578,7 @@ footer {
 }
 
 #createPDF .modal__content .modal__title-child {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 8px 15px;
 }
 
@@ -1574,8 +1597,8 @@ footer {
 }
 
 #createPDF .modal__content .modal__detail .user .avarta_name {
-    color: #003A8C;
-    background: #E6ECF4;
+    color: #003a8c;
+    background: #e6ecf4;
     width: 30px;
     height: 30px;
     border-radius: 50px;
@@ -1626,7 +1649,7 @@ footer {
 }
 
 #createPDF .modal__content .modal__detail .input_group .input_item #multiEmail:focus {
-    outline: 1px solid #003A8C;
+    outline: 1px solid #003a8c;
     border: none;
 }
 
@@ -1653,18 +1676,18 @@ footer {
     position: relative;
     height: 20px;
     width: 20px;
-    border: 2px solid #E6ECF4;
+    border: 2px solid #e6ecf4;
     border-radius: 4px;
     background-color: #fff;
     margin-right: 20px;
     vertical-align: middle;
 }
 
-.select2-results__option[aria-selected=true]:before {
+.select2-results__option[aria-selected="true"]:before {
     font-family: fontAwesome;
     content: "\f00c";
     color: #fff;
-    background-color: #003A8C;
+    background-color: #003a8c;
     border: 0;
     display: inline-block;
     width: 22px;
@@ -1673,12 +1696,12 @@ footer {
     /* padding-left: 3px; */
 }
 
-.select2-container--default .select2-results__option[aria-selected=true] {
+.select2-container--default .select2-results__option[aria-selected="true"] {
     background-color: #fff;
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #E6ECF4;
+    background-color: #e6ecf4;
     color: #333;
     font-weight: 500;
 }
@@ -1692,7 +1715,7 @@ footer {
 }
 
 .select2-container--default.select2-container--focus .select2-selection--multiple {
-    border-color: #003A8C;
+    border-color: #003a8c;
     border-width: 1px;
 }
 
@@ -1702,12 +1725,12 @@ footer {
 }
 
 .select2-selection .select2-selection--multiple:after {
-    content: 'hhghgh';
+    content: "hhghgh";
 }
 
 .select2-container--default .select2-selection--multiple .select2-selection__choice {
     background-color: rgba(67, 145, 253, 0.3);
-    border: 1px solid #E6ECF4;
+    border: 1px solid #e6ecf4;
     color: #333;
     font-weight: 500;
     border-radius: 4px;
@@ -1761,13 +1784,13 @@ footer {
 }
 
 #createPDF .modal__footer .btn_cancel:hover {
-    background: #003A8C;
+    background: #003a8c;
     color: #fff;
 }
 
 #createPDF .modal__footer .btn_save {
     color: #fff;
-    background: #003A8C;
+    background: #003a8c;
     border: none;
     outline: none;
     padding: 5px 15px;
@@ -1779,7 +1802,7 @@ footer {
 }
 
 #createPDF .modal__footer .btn_save:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
     color: #333;
 }
 
@@ -1834,7 +1857,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 50px;
-    background: #003A8C;
+    background: #003a8c;
     font-size: 20px;
     color: #fff;
     border-radius: 4px 4px 0 0;
@@ -1889,7 +1912,7 @@ footer {
 }
 
 #aLarm .modal-detail .modal-desc {
-    background: #E6ECF4;
+    background: #e6ecf4;
     padding: 5px;
     border-radius: 4px;
     font-style: italic;
@@ -1901,7 +1924,7 @@ footer {
 }
 
 #aLarm .btn--success {
-    background: #003A8C;
+    background: #003a8c;
     padding: 8px 15px;
     border: none;
     font-size: 15px;
@@ -1913,7 +1936,7 @@ footer {
 }
 
 #aLarm .btn--success:hover {
-    background: #E6ECF4;
+    background: #e6ecf4;
     color: #333;
 }
 
