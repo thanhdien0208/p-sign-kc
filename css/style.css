@@ -504,7 +504,7 @@ section .filter_content .input-date .btn-submit:hover {
 section .table_content {
     margin-top: 20px;
     overflow-y: scroll;
-    height: 500px;
+    height: 490px;
 }
 
 section .table_content table {
@@ -708,6 +708,16 @@ footer {
     position: fixed;
     bottom: 10px;
     left: 50%;
+}
+
+footer p {
+    color: #003a8c;
+    opacity: 0.8;
+}
+
+footer a {
+    color: #003a8c;
+    opacity: 0.8;
 }
 
 
